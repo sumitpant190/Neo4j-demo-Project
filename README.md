@@ -91,8 +91,4 @@ To visualize the data in the Neo4j Browser, use the following Cypher queries:
   MATCH (n)
   RETURN n
  ``` 
-- **View All Actors and the Movies They Acted In**:
-```
-MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
-RETURN p.name AS Actor, m.title AS Movie
-```
+
