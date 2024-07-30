@@ -87,6 +87,12 @@ Contains the script to use the `Neo4jDemo` class to:
 To visualize the data in the Neo4j Browser, use the following Cypher queries:
 
 - **View All Nodes and Relationships**:
-  ```cypher
+  ```
   MATCH (n)
   RETURN n
+ ``` 
+- **View All Actors and the Movies They Acted In**:
+```
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+RETURN p.name AS Actor, m.title AS Movie
+```
